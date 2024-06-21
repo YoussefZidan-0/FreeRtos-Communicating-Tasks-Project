@@ -27,6 +27,8 @@ The project is implemented using FreeRTOS on the target emulation board provided
 ### Task and Timer Behavior
 - **Sender Tasks**: Sleep for a random period (`Tsender`), then send a message to the queue. If the queue is full, a counter for blocked messages is incremented.
 - **Receiver Task**: Sleeps for a fixed period (`Treceiver`), then checks the queue for messages, processes one message if available, and increments a counter for received messages.
+![image](https://github.com/YoussefZidan-0/FreeRtos-Communicating-Tasks-Project/assets/125583818/cd8eafab-948b-41a1-a406-029f2d9716ef)
+![image](https://github.com/YoussefZidan-0/FreeRtos-Communicating-Tasks-Project/assets/125583818/16f48fdf-6d16-4804-9382-e3dcb98eb09f)
 
 ### Callback Functions
 - **Sender Timer Callback**: Unblocks the corresponding sender task by releasing its semaphore.
