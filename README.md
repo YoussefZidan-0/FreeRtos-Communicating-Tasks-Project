@@ -20,6 +20,10 @@ The project is implemented using FreeRTOS on the target emulation board provided
 
 3. **Queues**:
     - A single queue is used for communication between the sender and receiver tasks.
+  
+    - ![image](https://github.com/YoussefZidan-0/FreeRtos-Communicating-Tasks-Project/assets/125583818/f5a1bac8-3fb4-4361-82c7-7ae27f001246)
+
+      - ![image](https://github.com/YoussefZidan-0/FreeRtos-Communicating-Tasks-Project/assets/125583818/31d3e5ea-f137-47be-83bd-9c819944a78d)
 
 4. **Semaphores**:
     - Semaphores are used to synchronize the timers and tasks.
@@ -27,7 +31,9 @@ The project is implemented using FreeRTOS on the target emulation board provided
 ### Task and Timer Behavior
 - **Sender Tasks**: Sleep for a random period (`Tsender`), then send a message to the queue. If the queue is full, a counter for blocked messages is incremented.
 - **Receiver Task**: Sleeps for a fixed period (`Treceiver`), then checks the queue for messages, processes one message if available, and increments a counter for received messages.
+- 
 ![image](https://github.com/YoussefZidan-0/FreeRtos-Communicating-Tasks-Project/assets/125583818/cd8eafab-948b-41a1-a406-029f2d9716ef)
+
 ![image](https://github.com/YoussefZidan-0/FreeRtos-Communicating-Tasks-Project/assets/125583818/16f48fdf-6d16-4804-9382-e3dcb98eb09f)
 
 ### Callback Functions
